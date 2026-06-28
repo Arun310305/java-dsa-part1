@@ -1,26 +1,29 @@
-//Take 2 numbers as inputs and find their HCF and LCM.
+//To find out whether the given String is Palindrome or not.
 import java.util.Scanner;
-class Prog4
-{
-    public static void main(String[] args)
-    {
-        Scanner scn=new Scanner(System.in);
-        System.out.println("ENTER NUM!:");
-        int num1=scn.nextInt();
-        System.out.println("ENTER NUM2:");
-        int num2=scn.nextInt();
-        int hfc= 0;
-        for(int i=1;i<=num1&&i<=num2;i++)
-        {
-            if(num1%i==0 && num2%i==0)
-            {
-                hfc=i;
-            }
-        }
-        System.out.println("HCF: " + hfc);
-        int lcm=num1*num2/hfc;
-        System.out.println("LCM: " + lcm);
-        scn.close();
-    }
-
+public class Prog4 {
+	public static void main(String[] args)
+	{
+	Scanner scn=new Scanner(System.in);
+		System.out.println("ENTER STRING");
+		String s1=scn.next();
+		String rev="";
+		char ch=' ';
+		for(int i=s1.length()-1;i>=0;i--)
+		{
+			ch =s1.charAt(i);
+			rev=rev+ch;
+		}
+		System.out.println(rev);
+		
+		if(rev.equals(s1))
+		{
+			System.out.println("IT IS PALINDROM");
+		}
+		else
+		{
+			System.out.println("IT IS NOT PALINDROM");
+		
+		}
+		scn.close();
+	}
 }
